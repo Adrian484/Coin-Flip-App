@@ -20,6 +20,19 @@ body {
     font-size: 24px;
 }
 
+#result-message {
+    display: none;
+    position: absolute; /* Position the message absolutely */
+    top: 50px; /* Adjust the top position as needed */
+    left: 50%; /* Position the message horizontally centered */
+    transform: translateX(-50%); /* Center the message horizontally */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
 .coin {
     width: 200px;
     height: 200px;
@@ -28,7 +41,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     position: relative;
     transform-style: preserve-3d;

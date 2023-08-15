@@ -1,16 +1,17 @@
-const animationDuration = 2000; // Set the duration in milliseconds
+const animationDuration = 2000;
 
 const coin = document.querySelector('.coin');
 const flipButton = document.getElementById('flip-button');
 const headsButton = document.getElementById('heads-button');
 const tailsButton = document.getElementById('tails-button');
-const flippingMessage = document.getElementById('flipping-message'); // Reference the message element
+const flippingMessage = document.getElementById('flipping-message');
+const resultMessage = document.getElementById('result-message'); // Reference the result message element
 
 flipButton.addEventListener('click', () => {
     const result = Math.random() < 0.5 ? 'heads' : 'tails';
     
-    // Show the flipping message when the button is clicked
     flippingMessage.style.display = 'block';
+    resultMessage.style.display = 'none'; // Hide the result message on button click
     
     coin.style.animation = `flip-animation ${animationDuration / 1000}s ${result}-animation forwards`;
     
@@ -19,9 +20,12 @@ flipButton.addEventListener('click', () => {
         coin.setAttribute('data-side', result);
         updateCoinVisual(result);
         
-        // Hide the flipping message when the animation is complete
         flippingMessage.style.display = 'none';
-    }, animationDuration); // Use the same duration
+        resultMessage.style.display = 'block'; // Show the result message
+        
+        // Set the content of the result message based on the outcome
+        resultMessage.textContent = result === 'heads' ? 'Heads!' : 'Tails!';
+    }, animationDuration);
 });
 
 headsButton.addEventListener('click', () => {
