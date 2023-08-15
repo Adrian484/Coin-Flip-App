@@ -46,6 +46,7 @@ body {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;
+    margin-bottom: 20px;
 }
 
 .side {
@@ -72,6 +73,9 @@ body {
 
 button {
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
