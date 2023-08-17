@@ -37,7 +37,6 @@ body {
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    background-color: #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,13 +61,11 @@ body {
 
 #heads {
     transform: rotateY(0deg);
-    background-color: teal;
     color: white;
 }
 
 #tails {
     transform: rotateY(180deg);
-    background-color: #3498db;
     color: white;
 }
 
@@ -93,4 +90,22 @@ button {
 @keyframes flip-animation-tails {
     from { transform: rotateY(0deg); }
     to { transform: rotateY(1980deg); } /* Choose a rotation value to match the duration */
+}
+
+.side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    background-color: transparent; /* Remove the background color */
+}
+
+#heads img,
+#tails img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Scale images to fit the container while preserving aspect ratio */
 }
