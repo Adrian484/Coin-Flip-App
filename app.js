@@ -9,23 +9,15 @@ const resultMessage = document.getElementById('result-message'); // Reference th
 
 flipButton.addEventListener('click', () => {
     const result = Math.random() < 0.5 ? 'heads' : 'tails';
+    const rotationDuration = 3.0; // Duration of the animation in seconds
     
-    flippingMessage.style.display = 'block';
-    resultMessage.style.display = 'none'; // Hide the result message on button click
-    
-    coin.style.animation = `flip-animation ${animationDuration / 1000}s ${result}-animation forwards`;
+    coin.style.animation = `flip-animation-${result} ${rotationDuration}s ease-out forwards`;
     
     setTimeout(() => {
         coin.style.animation = '';
         coin.setAttribute('data-side', result);
         updateCoinVisual(result);
-        
-        flippingMessage.style.display = 'none';
-        resultMessage.style.display = 'block'; // Show the result message
-        
-        // Set the content of the result message based on the outcome
-        resultMessage.textContent = result === 'heads' ? 'Heads!' : 'Tails!';
-    }, animationDuration);
+    }, rotationDuration * 1000); // Convert seconds to milliseconds
 });
 
 headsButton.addEventListener('click', () => {
