@@ -4,33 +4,35 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: grey;
+    background-color: black;
 }
 
 #flipping-message {
     display: none;
-    position: absolute; /* Position the message absolutely */
-    top: 50px; /* Adjust the top position as needed */
-    left: 50%; /* Position the message horizontally centered */
-    transform: translateX(-50%); /* Center the message horizontally */
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-    color: white;
+    position: absolute; 
+    top: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: teal; /* Background colour of flip message */
+    color: white; /* Colour of message font */
     padding: 10px;
     border-radius: 5px;
     font-size: 48px;
+    font-family: Verdana;
 }
 
 #result-message {
     display: none;
-    position: absolute; /* Position the message absolutely */
-    top: 50px; /* Adjust the top position as needed */
-    left: 50%; /* Position the message horizontally centered */
-    transform: translateX(-50%); /* Center the message horizontally */
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-    color: white;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: teal; /* Background colour of flip message */
+    color: white; /* Colour of message font */
     padding: 10px;
     border-radius: 5px;
     font-size: 48px;
+    font-family: Verdana;
 }
 
 .coin {
@@ -80,6 +82,7 @@ button {
     color: white;
     cursor: pointer;
     border-radius: 4px;
+    font-family: Verdana;
 }
 
 @keyframes flip-animation-heads {
