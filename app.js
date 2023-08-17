@@ -2,8 +2,7 @@ const animationDuration = 2000;
 
 const coin = document.querySelector('.coin');
 const flipButton = document.getElementById('flip-button');
-const headsButton = document.getElementById('heads-button');
-const tailsButton = document.getElementById('tails-button');
+
 const flippingMessage = document.getElementById('flipping-message');
 const resultMessage = document.getElementById('result-message'); // Reference the result message element
 
@@ -18,18 +17,6 @@ flipButton.addEventListener('click', () => {
         coin.setAttribute('data-side', result);
         updateCoinVisual(result);
     }, rotationDuration * 1000); // Convert seconds to milliseconds
-});
-
-headsButton.addEventListener('click', () => {
-    coin.style.animation = '';
-    coin.setAttribute('data-side', 'heads');
-    updateCoinVisual('heads');
-});
-
-tailsButton.addEventListener('click', () => {
-    coin.style.animation = '';
-    coin.setAttribute('data-side', 'tails');
-    updateCoinVisual('tails');
 });
 
 function updateCoinVisual(side) {
